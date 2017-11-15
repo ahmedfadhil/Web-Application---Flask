@@ -2,32 +2,36 @@
 
 {% block body %}
 
-<div role="tabpanel">
+    <div role="tabpanel">
 
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#basics" aria-controls="basics" role="tab" data-toggle="tab">Basics</a></li>
-    <li role="presentation"><a href="#wdev" aria-controls="wdev" role="tab" data-toggle="tab">Web Dev</a></li>
-    <li role="presentation"><a href="#dan" aria-controls="dan" role="tab" data-toggle="tab">Data Analysis</a></li>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#basics" aria-controls="basics" role="tab"
+                                                      data-toggle="tab">Basics</a>
+            </li>
+            <li role="presentation"><a href="#wdev" aria-controls="wdev" role="tab" data-toggle="tab">Web Dev</a></li>
+            <li role="presentation"><a href="#dan" aria-controls="dan" role="tab" data-toggle="tab">Data Analysis</a>
+            </li>
 
-  </ul>
+        </ul>
 
-  <!-- Tab panes -->
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane fade in" id="basics">
-	<ul>
-	   <li>dfadsfasf</li>
-	   <li>jjh</li>
-	   <li>assggg</li>
-	</ul>
-  </div>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in" id="basics">
+                <ul>
+                    {% for t in TOPIC_DICT["Basics"] %}
+                        <li><a href="{{ t[1] }}">{{ t[0] }}</a></li>
+                    {% endfor %}
 
-  <div role="tabpanel" class="tab-pane fade" id="wdev">web dev</div>
+                </ul>
+            </div>
 
-  <div role="tabpanel" class="tab-pane fade" id="dan">Data analysis!#Q$@!#</div>
+            <div role="tabpanel" class="tab-pane fade" id="wdev">web dev</div>
 
-</div>
+            <div role="tabpanel" class="tab-pane fade" id="dan">Data analysis!#Q$@!#</div>
 
-</div>
+        </div>
+
+    </div>
 
 {% endblock %}
