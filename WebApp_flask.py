@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, flash
 from content_management import Content
 
 TOPIC_DICT = Content()
@@ -13,6 +13,7 @@ def homepage():
 
 @app.route('/dashboard/')
 def dashboard():
+    flash("Flashing")
     return render_template("dashboard.html", TOPIC_DICT=TOPIC_DICT)
 
 
@@ -29,5 +30,20 @@ def slashboard():
         return render_template("500.html", error=e)
 
 
+@app.route('/login/')
+def login_page():
+    return render_template("login.html")
+
+
+# if __name__ == "__main__":
+#     app.run()
+
+
 if __name__ == "__main__":
+    app.secret_key = 'super secret key'
+    app.config['SESSION_TYPE'] = 'filesystem'
+
+    # sess.init_app(app)
+
+    app.debug = True
     app.run()
