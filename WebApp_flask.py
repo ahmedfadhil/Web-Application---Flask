@@ -1,5 +1,6 @@
 from flask import Flask, render_template, flash, request, url_for, redirect
 from content_management import Content
+from dbconnect import connection
 
 TOPIC_DICT = Content()
 
@@ -57,6 +58,14 @@ def login_page():
 
 # if __name__ == "__main__":
 #     app.run()
+@app.route('/register/', methods=['GET', 'POST'])
+def register_page():
+    try:
+        c, conn = connection()
+        return ("Okay")
+
+    except Exception as e:
+        return (str(e))
 
 
 if __name__ == "__main__":
