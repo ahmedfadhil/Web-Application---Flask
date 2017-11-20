@@ -1,5 +1,8 @@
 from flask import Flask, render_template, flash, request, url_for, redirect
 from content_management import Content
+from wtforms import Form
+from passlib.hash import sha256_crypt
+from MySQLdb import escape_string as thwart
 from dbconnect import connection
 
 TOPIC_DICT = Content()
@@ -54,6 +57,15 @@ def login_page():
     except Exception as e:
         # flash(e)
         return render_template("login.html", error=error)
+
+
+class RegistrationForm(Form):
+    username = TextField('Username', [validators.length(min=4, max=20)])
+    email = TextField('Email Address', [validators.length(min=4, max=50)])
+    password = PasswordField('Password', [validators.Required(),
+                                          validators.EqualTo('Confirm', message='Passwords must match.')])
+    confirm = PasswordField('Repeat Password')
+    accept_tos = BooleanField('I accept the terms of service and the privacy notice'.[validators.Required()])
 
 
 # if __name__ == "__main__":
