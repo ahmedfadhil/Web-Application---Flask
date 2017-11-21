@@ -1,9 +1,10 @@
-from flask import Flask, render_template, flash, request, url_for, redirect
+from flask import Flask, render_template, flash, request, url_for, redirect, session
 from content_management import Content
-from wtforms import Form
+from wtforms import Form,BooleanField,TextField, PasswordField, validators
 from passlib.hash import sha256_crypt
 from MySQLdb import escape_string as thwart
 from dbconnect import connection
+import gc
 
 TOPIC_DICT = Content()
 
@@ -73,8 +74,34 @@ class RegistrationForm(Form):
 @app.route('/register/', methods=['GET', 'POST'])
 def register_page():
     try:
-        c, conn = connection()
-        return ("Okay")
+        # c, conn = connection()
+        # return ("Okay")
+        form = RegistrationForm(request.form)
+        if request.method == "POST" and form.validate():
+            username = form.username.data
+            email = form.email.data
+            password = sha256_crypt.encrypt((str(form.password.data)))
+            c, conn = connection()
+            x = c.execute("SELECT * FROM users WHERE username =(%s)", (thwart(username)))
+
+            if int(len(x)) > 0:
+                flash("That name is already chosen, please choose another")
+                return render_template('register.html', form=form)
+            else:
+                c.execute("INSERT INTO users (username, password, email,tracking) VALUE (%s,%s,%s,%s)",
+                          (thwart(username), thwart(password), thwart(email), thwart("/introduction-to-programming/")))
+            conn.commit()
+            flash("Thanks for registering!")
+            c.close()
+            conn.close()
+
+            gc.collect()
+            session['logged_in'] = True
+            session['username'] = username
+
+            return redirect(url_for('dashboard'))
+
+        return render_template('register.html', form=form)
 
     except Exception as e:
         return (str(e))

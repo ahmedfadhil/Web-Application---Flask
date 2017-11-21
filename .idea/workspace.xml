@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="853d22a1-1133-40fd-bf3e-68797d8ad28c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/register.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebApp_flask.py" afterPath="$PROJECT_DIR$/WebApp_flask.py" />
     </list>
@@ -17,9 +18,12 @@
       <file leaf-file-name="WebApp_flask.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebApp_flask.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-              <folding />
+            <state relative-caret-position="38">
+              <caret line="2" column="74" lean-forward="false" selection-start-line="2" selection-start-column="74" selection-end-line="2" selection-end-column="74" />
+              <folding>
+                <marker date="1511222313000" expanded="true" signature="2673:2713" ph="SELECT * FRO... users" />
+                <marker date="1511222313000" expanded="true" signature="2957:3031" ph="INSERT INTO users... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,6 +122,11 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="WebApp_flask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebApp_flask" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -132,16 +141,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/static/js" />
       <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/static/css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -229,7 +238,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1511222313000" expanded="true" signature="2673:2713" ph="SELECT * FRO... users" />
+            <marker date="1511222313000" expanded="true" signature="2957:3031" ph="INSERT INTO users... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -245,7 +257,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1511222313000" expanded="true" signature="2673:2713" ph="SELECT * FRO... users" />
+            <marker date="1511222313000" expanded="true" signature="2957:3031" ph="INSERT INTO users... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -253,7 +268,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1511222313000" expanded="true" signature="2673:2713" ph="SELECT * FRO... users" />
+            <marker date="1511222313000" expanded="true" signature="2957:3031" ph="INSERT INTO users... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -261,7 +279,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1511222313000" expanded="true" signature="2673:2713" ph="SELECT * FRO... users" />
+            <marker date="1511222313000" expanded="true" signature="2957:3031" ph="INSERT INTO users... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -269,7 +290,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1511222313000" expanded="true" signature="2673:2713" ph="SELECT * FRO... users" />
+            <marker date="1511222313000" expanded="true" signature="2957:3031" ph="INSERT INTO users... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -277,7 +301,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1511222313000" expanded="true" signature="2673:2713" ph="SELECT * FRO... users" />
+            <marker date="1511222313000" expanded="true" signature="2957:3031" ph="INSERT INTO users... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -285,7 +312,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1511222313000" expanded="true" signature="2673:2713" ph="SELECT * FRO... users" />
+            <marker date="1511222313000" expanded="true" signature="2957:3031" ph="INSERT INTO users... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -293,7 +323,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1511222313000" expanded="true" signature="2673:2713" ph="SELECT * FRO... users" />
+            <marker date="1511222313000" expanded="true" signature="2957:3031" ph="INSERT INTO users... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -301,7 +334,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1511222313000" expanded="true" signature="2673:2713" ph="SELECT * FRO... users" />
+            <marker date="1511222313000" expanded="true" signature="2957:3031" ph="INSERT INTO users... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -359,7 +395,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1511222313000" expanded="true" signature="2673:2713" ph="SELECT * FRO... users" />
+            <marker date="1511222313000" expanded="true" signature="2957:3031" ph="INSERT INTO users... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -410,7 +449,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1511222313000" expanded="true" signature="2673:2713" ph="SELECT * FRO... users" />
+            <marker date="1511222313000" expanded="true" signature="2957:3031" ph="INSERT INTO users... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -532,11 +574,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebApp_flask.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-          <folding />
+        <state relative-caret-position="38">
+          <caret line="2" column="74" lean-forward="false" selection-start-line="2" selection-start-column="74" selection-end-line="2" selection-end-column="74" />
+          <folding>
+            <marker date="1511222313000" expanded="true" signature="2673:2713" ph="SELECT * FRO... users" />
+            <marker date="1511222313000" expanded="true" signature="2957:3031" ph="INSERT INTO users... " />
+          </folding>
         </state>
       </provider>
     </entry>
