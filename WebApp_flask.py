@@ -1,6 +1,6 @@
 from flask import Flask, render_template, flash, request, url_for, redirect, session
 from content_management import Content
-from wtforms import Form,BooleanField,TextField, PasswordField, validators
+from wtforms import Form, BooleanField, TextField, PasswordField, validators
 from passlib.hash import sha256_crypt
 from MySQLdb import escape_string as thwart
 from dbconnect import connection
@@ -44,20 +44,54 @@ def method_not_found(e):
 def login_page():
     error = ''
     try:
+        c, conn = connection()
         if request.method == "POST":
-            attempted_username = request.form['username']
-            attempted_password = request.form['password']
-            # flash(attempted_username)
-            # flash(attempted_password)
+            data = c.execute("SELECT * FROM users WHERE username = (%s)",
+                             thwart(request.form['username']))
 
-            if attempted_username == "admin" and attempted_password == "password":
+            data = c.fetchone()[2]
+
+            if sha256_crypt.verify(request.form["password", data]):
+                session['logged_in'] = True
+                session['username'] = request.form["username"]
+                flash("You logged in successfully")
+
                 return redirect(url_for("dashboard"))
-            else:
-                error = "Invalid credentials. Try again."
-        return render_template("login.html")
+
+        else:
+            error = "Invalid credentials, try again"
+
+    gc.collect()
+    return render_template("login.html", error=error)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #     attempted_username = request.form['username']
+    #     attempted_password = request.form['password']
+    #     # flash(attempted_username)
+    #     # flash(attempted_password)
+    #
+    #     if attempted_username == "admin" and attempted_password == "password":
+    #         return redirect(url_for("dashboard"))
+    #     else:
+    #         error = "Invalid credentials. Try again."
+    # return render_template("login.html")
     except Exception as e:
-        # flash(e)
-        return render_template("login.html", error=error)
+    # flash(e)
+    error = "Invalid credentials, try again"
+    return render_template("login.html", error=error)
 
 
 class RegistrationForm(Form):
@@ -84,7 +118,7 @@ def register_page():
             c, conn = connection()
             x = c.execute("SELECT * FROM users WHERE username =(%s)", (thwart(username)))
 
-            if int(len(x)) > 0:
+            if int(x) > 0:
                 flash("That name is already chosen, please choose another")
                 return render_template('register.html', form=form)
             else:
