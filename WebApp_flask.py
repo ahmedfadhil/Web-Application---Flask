@@ -4,6 +4,7 @@ from wtforms import Form, BooleanField, TextField, PasswordField, validators
 from passlib.hash import sha256_crypt
 from MySQLdb import escape_string as thwart
 from dbconnect import connection
+from functools import wraps
 import gc
 
 TOPIC_DICT = Content()
@@ -30,6 +31,24 @@ def page_not_found(e):
 @app.errorhandler(405)
 def method_not_found(e):
     return render_template('405.html')
+
+
+def login_required(f):
+    @wraps(f)
+    def wraps(*args, **kwargs):
+        if 'logged_in' in session:
+            return f(*args, **kwargs)
+        else:
+            flash("You need to login first")
+            return redirect(url_for('login_page'))
+    return wraps
+@app.route("/logout/")
+@login_required
+def logout():
+    session.clear()
+    flash("You have been logged out")
+    gc.collect()
+    return redirect(url_for('homepage'))
 
 
 # @app.route('/slashboard/')
